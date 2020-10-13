@@ -1,5 +1,6 @@
 import pyodbc  # needed to connect to a read database server over ODBC
 import keyring  # used to hide secrets from being clear text in code
+import numpy as np
 import pandas as pd
 
 #keyring.set_password("sqlserverpass", "srvadmin", "Palmetto7")  #remove once set
@@ -19,5 +20,7 @@ with pyodbc.connect('DRIVER='+driver+';SERVER='+server+';PORT=1433;DATABASE='+da
     var1 = 'test'
     df = pd.DataFrame(SQL_Query, columns=['ProductID','Name'])
     print (df)
+
+pd.Series([1,3,5,np.nan,6,8])
 
 
