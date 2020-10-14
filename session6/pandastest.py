@@ -62,7 +62,7 @@ print(df['A'])
 
 #Selecting via [], which slices the rows.
 
-print(df[0:3])
+print(df[0:100])
 print(df['20130102':'20130104'])
 
 # selecting by label 
@@ -70,9 +70,7 @@ print(df['20130102':'20130104'])
 print(df.loc[dates[0]])
 
 #Selecting on a multi-axis by label:
-print(
-    df.loc[:, ['A', 'B']]
-    )
+
 
 #Showing label slicing, both endpoints are included:
 print(
@@ -91,11 +89,14 @@ print(
     df.iloc[3]
     )
 
+
+
 #By integer slices, acting similar to numpy/python:
 
 print(
     df.iloc[3:5, 0:2]
     )
+
 
 #By lists of integer position locations, similar to the numpy/python style:
 
